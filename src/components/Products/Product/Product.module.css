@@ -1,0 +1,94 @@
+.product {
+  width: 30%;
+  min-height: 600px;
+  height: fit-content;
+  margin: 1.5%;
+  box-shadow: 0 2px 8px rgba(22, 160, 214, 0.26);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  float: left;
+}
+
+.product__image {
+  object-fit: contain;
+  flex: 50%;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 2px;
+  transition: transform 0.2s; /* Animation */
+  overflow: hidden;
+}
+.product__image:hover {
+  transform: scale(1.5);
+}
+
+.product__details {
+  flex: 50%;
+  background-color: var(--blue_dark);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.details__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--black__dark);
+}
+
+.details__desc {
+  font-size: 10px;
+  color: var(--black_light);
+}
+
+.details__price {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black__dark);
+}
+
+.product__buttons {
+  background-color: var(--blue_dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  z-index: 99;
+}
+
+.buttons__btn {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid var(--blue_cyan);
+  border-radius: 10px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--black__dark);
+  color: var(--blue_cyan);
+  z-index: 99;
+}
+
+.buttons__btn:hover {
+  background: var(--blue_cyan);
+  color: var(--black__dark);
+}
+
+.buttons__view {
+  background: var(--black_light);
+  color: var(--blue_cyan);
+}
+
+.buttons__add {
+  background: var(--secondary-color);
+  color: var(--light-color);
+}
+
+@media only screen and (max-width: 800px) {
+}
