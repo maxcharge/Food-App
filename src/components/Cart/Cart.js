@@ -30,22 +30,25 @@ const Cart = ({ cart }) => {
       </div>
       <div className={styles.cart__summary}>
         <h4 className={styles.summary__title}>Cart Summary</h4>
-      <div className={styles.table__holder}>
-        <table >
-          <tr>
-            <th>Dish Item</th>
-            <th>Dish Price</th>
-            <th>Quantity</th>
-          </tr>
-          {cart.map((item)=>(
-            <tr>
-              <th>{item.title}</th>
-              <th>{item.price}</th>
-              <th>{item.qty}</th>
-            </tr>))}
-        </table>
-      </div>
-      <hr/>
+        <div className={styles.table__holder}>
+          <table >
+            <tbody>
+              <tr>
+                <th>Dish Item</th>
+                <th>Dish Price</th>
+                <th>Quantity</th>
+              </tr>
+              {cart.map((item)=>(
+                <tr>
+                  <th>{item.title}</th>
+                  <th>{item.price}</th>
+                  <th>{item.qty}</th>
+                </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+        <hr/>
         <div className={styles.summary__price}>
           <span>TOTAL: ({totalItems} items)</span>
           <span>$ {totalPrice}</span>

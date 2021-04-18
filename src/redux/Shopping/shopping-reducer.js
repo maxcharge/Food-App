@@ -93,18 +93,27 @@ const INITIAL_STATE = {
         "https://images.unsplash.com/photo-1616690710400-a16d146927c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
     },
   ],
-  cart: [],
+  cart: [
+    {
+      id: 10,
+      title: "Oreo cake",
+      description:
+        "Medium sized cake large sized taste",
+      price: 150.0,
+      image:
+        "https://images.unsplash.com/photo-1616690710400-a16d146927c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+      qty:3,
+    },
+  ],
   currentItem: null,
 };  
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-      // Great Item data from products array
       const item = state.products.find(
         (product) => product.id === action.payload.id
       );
-      // Check if Item is in cart already
       const inCart = state.cart.find((item) =>
         item.id === action.payload.id ? true : false
       );

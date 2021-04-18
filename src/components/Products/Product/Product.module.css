@@ -1,8 +1,7 @@
 .product {
   width: 30%;
-  min-height: 600px;
-  height: fit-content;
   margin: 1.5%;
+  max-height: 500px;
   box-shadow: 0 2px 8px rgba(22, 160, 214, 0.26);
   border-radius: 10px;
   overflow: hidden;
@@ -14,9 +13,8 @@
 
 .product__image {
   object-fit: contain;
-  flex: 50%;
+  flex: 30%;
   width: 100%;
-  max-width: 100%;
   border-radius: 2px;
   transition: transform 0.2s; /* Animation */
   overflow: hidden;
@@ -26,13 +24,12 @@
 }
 
 .product__details {
-  flex: 50%;
+  flex: 30%;
   background-color: var(--blue_dark);
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  overflow: hidden;
   z-index: 99;
 }
 
@@ -54,10 +51,11 @@
 }
 
 .product__buttons {
+  flex: 30%;
   background-color: var(--blue_dark);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 1rem;
   z-index: 99;
 }
@@ -91,4 +89,9 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .product {
+    width: 45%;
+    margin: 2.5%;
+    max-height: 300px;
+  }
 }

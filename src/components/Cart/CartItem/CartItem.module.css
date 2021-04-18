@@ -79,3 +79,15 @@
   width: 25px;
   height: 25px;
 }
+
+@media only screen and (max-width: 800px) {
+  .cartItem {
+    flex-direction: column-reverse;
+  }
+  .btn__holder {
+    flex-direction: row-reverse;
+  }
+  .cartItem__details {
+    padding: 30px;
+  }
+}
