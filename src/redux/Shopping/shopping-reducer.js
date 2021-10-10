@@ -7,7 +7,7 @@ const INITIAL_STATE = {
       title: "Pizza",
       description:
         "Hot pizza wit cheese, cheese and cheese",
-      price: 150.0,
+      price: 450.0,
       image:
           "https://images.unsplash.com/photo-1618417789450-7c6a5fa113e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
@@ -16,7 +16,7 @@ const INITIAL_STATE = {
       title: "Blueberry Pastry",
       description:
         "Blue, sweet...ummm ok let me eat",
-      price: 20.0,
+      price: 200.0,
       image:
         "https://images.unsplash.com/photo-1617980695459-c3f033df383d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
@@ -25,7 +25,7 @@ const INITIAL_STATE = {
       title: "Donuts",
       description:
         "Round sweet soft and delicicous",
-      price: 15.0,
+      price: 150.0,
       image:
         "https://images.unsplash.com/photo-1618411640018-972400a01458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
@@ -43,7 +43,7 @@ const INITIAL_STATE = {
       title: "Majesty Burger",
       description:
         "Huge burger great taste",
-      price: 75.0,
+      price: 150.0,
       image:
         "https://images.unsplash.com/photo-1590742309630-e9f9b66da3f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
@@ -52,7 +52,7 @@ const INITIAL_STATE = {
       title: "Garlic Bread",
       description:
         "Great partner of hot soup",
-      price: 15.0,
+      price: 105.0,
       image:
         "https://images.unsplash.com/photo-1617713807246-9b9e55ef560e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
@@ -61,7 +61,7 @@ const INITIAL_STATE = {
       title: "Red Velvet cake",
       description:
         "Served for special occasions",
-      price: 300.0,
+      price: 350.0,
       image:
         "https://images.unsplash.com/photo-1617303462864-58d23bab4ca7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=367&q=80",
     },
@@ -70,7 +70,7 @@ const INITIAL_STATE = {
       title: "Cookies",
       description:
         "Choco chips and butterscotch available",
-      price: 5.0,
+      price: 55.0,
       image:
         "https://images.unsplash.com/photo-1612845575953-f4b1e3d63160?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=360&q=80",
     },
@@ -79,7 +79,7 @@ const INITIAL_STATE = {
       title: "Strawberry cake",
       description:
         "For special days or to make it special",
-      price: 200.0,
+      price: 400.0,
       image:
         "https://images.unsplash.com/photo-1616690599988-f0cf77748e84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
@@ -88,7 +88,7 @@ const INITIAL_STATE = {
       title: "Oreo cake",
       description:
         "Medium sized cake large sized taste",
-      price: 150.0,
+      price: 450.0,
       image:
         "https://images.unsplash.com/photo-1616690710400-a16d146927c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
     },
@@ -99,7 +99,7 @@ const INITIAL_STATE = {
       title: "Oreo cake",
       description:
         "Medium sized cake large sized taste",
-      price: 150.0,
+      price: 450.0,
       image:
         "https://images.unsplash.com/photo-1616690710400-a16d146927c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
       qty:3,

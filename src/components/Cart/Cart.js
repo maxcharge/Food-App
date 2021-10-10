@@ -51,7 +51,7 @@ const Cart = ({ cart }) => {
         <hr/>
         <div className={styles.summary__price}>
           <span>TOTAL: ({totalItems} items)</span>
-          <span>$ {totalPrice}</span>
+          <span>Rs {totalPrice}</span>
         </div>
       </div>
     </div>
