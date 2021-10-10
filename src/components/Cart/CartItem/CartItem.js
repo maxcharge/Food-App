@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./CartItem.module.css";
-
+import close from "../../../utils/close.png" 
 import { connect } from "react-redux";
 import {
   adjustItemQty,
@@ -53,7 +53,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
           className={styles.actions__deleteItemBtn}
         >
           <img
-            src="https://cdn-icons.flaticon.com/png/512/3588/premium/3588762.png?token=exp=1633885840~hmac=c60565f2b4977250751446319c035e23"
+            src={close}
             alt=""
           />
         </button>
