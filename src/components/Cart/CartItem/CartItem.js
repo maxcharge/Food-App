@@ -53,7 +53,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
           className={styles.actions__deleteItemBtn}
         >
           <img
-            src="https://www.flaticon.com/svg/vstatic/svg/2919/2919590.svg?token=exp=1618653298~hmac=d5a0fd667f67033abee9cc0871490fbb"
+            src="https://cdn-icons.flaticon.com/png/512/3588/premium/3588762.png?token=exp=1633885840~hmac=c60565f2b4977250751446319c035e23"
             alt=""
           />
         </button>

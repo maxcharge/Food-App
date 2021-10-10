@@ -29,15 +29,15 @@ const INITIAL_STATE = {
       image:
         "https://images.unsplash.com/photo-1618411640018-972400a01458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
     },
-    {
-      id: 4,
-      title: "Tomato soup",
-      description:
-        "Hot boul of soup with croutons",
-      price: 50.0,
-      image:
-        "https://images.unsplash.com/photo-1607800910317-b92a6c395a1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-    },
+    // {
+    //   id: 4,
+    //   title: "Tomato soup",
+    //   description:
+    //     "Hot boul of soup with croutons",
+    //   price: 50.0,
+    //   image:
+    //     "https://images.unsplash.com/photo-1607800910317-b92a6c395a1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+    // },
     {
       id: 5,
       title: "Majesty Burger",
