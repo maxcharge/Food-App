@@ -1,0 +1,361 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+  --black__dark: #0b0c10;
+  --black_light: #1f2833;
+  --gray_white: #c5c6c7;
+  --blue_cyan: #66fcf1;
+  --blue_dark: #45a29e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0c10;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background: rgb(0, 0, 0, 75%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+}
+
+.navbar__logo {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: var(--blue_cyan);
+  outline: none;
+  z-index: inherit;
+}
+
+.navbar__cart {
+  background: transparent;
+  width: fit-content;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: inherit;
+  outline: none;
+}
+.cart__title {
+  color: var(--blue_cyan);
+  margin: 10px;
+  outline: none;
+}
+.cart__counter {
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--black__dark);
+  border-radius: 50%;
+  color: var(--black__dark);
+  background: var(--blue_cyan);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.cart__counter:hover {
+  background-color: var(--black__dark);
+  color: var(--blue_cyan);
+}
+
+
+    .app {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.cart {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cart__items {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__summary {
+  color: var(--blue_dark);
+  margin: 50px;
+  height: 250px;
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(16, 202, 235, 0.26);
+  border-radius: 10px;
+}
+
+.summary__title {
+    color: var(--blue_dark);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.summary__price {
+    color: var(--blue_dark);
+  display: flex;
+  align-items: center;
+}
+
+.summary__price span:nth-child(1) {
+    color: var(--blue_dark);
+  font-size: 20px;
+  flex: 0.6;
+}
+
+.summary__price span:nth-child(2) {
+    color: var(--blue_dark);
+  flex: 0.4;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.summary__checkoutBtn {
+    color: var(--blue_dark);
+  padding: 10px;
+  border: 1px solid var(--blue_cyan);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--blue_dark);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.summary__checkoutBtn:hover {
+  outline: none;
+  background: var(--blue_cyan);
+  color: var(--black__dark);
+}
+
+.summary__checkoutBtn:hover {
+  opacity: 0.75;
+}
+
+table {
+  width: 100%;
+}
+th {
+  border: 1px solid var(--blue_dark);
+  color: var(--blue_dark);
+}
+
+hr {
+  border-color: aqua;
+}
+
+@media only screen and (max-width: 800px) {
+  .cart {
+    flex-direction: column-reverse;
+  }
+}
+.cartItem {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 2px 8px rgba(14, 203, 209, 0.26);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cartItem__image {
+  flex: 30%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.cartItem__details {
+  flex: 70%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--blue_dark);
+}
+
+.details__title {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.details__desc {
+  font-size: 20px;
+}
+
+.details__price {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.cartItem__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+}
+
+.cartItem__qty {
+  display: flex;
+  align-items: center;
+}
+
+.cartItem__qty input {
+  padding: 10px;
+  margin-left: 0.4rem;
+  width: 60px;
+  border-radius: 10px;
+  color: var(--blue_cyan);
+  background: transparent;
+  border: 1px solid #66fcf1;
+  outline: none;
+}
+
+.btn__holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.actions__deleteItemBtn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out 0.7s;
+  outline: none;
+}
+
+.actions__deleteItemBtn img {
+  width: 25px;
+  height: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+  .cartItem {
+    flex-direction: column-reverse;
+  }
+  .btn__holder {
+    flex-direction: row-reverse;
+  }
+  .cartItem__details {
+    padding: 30px;
+  }
+}
+
+</style>
+<body>
+    <div class="app">
+        <div id="root">
+            <div class="navbar">
+                  <h2 class="navbar__logo">Menu</h2>
+                  <div class="navbar__cart">
+                    <h3 class="cart__title">Cart</h3>
+                    <div class="cart__counter">1</div>
+                  </div>
+              </div>
+    <div class="cart">
+        <div class="cart__items">
+            <div class="cartItem">
+                <img
+                  class="cartItem__image"
+                  src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                  alt="Title"
+                />
+          
+                <div class="cartItem__details">
+                  <p class="details__title">Mens Casual Premium Slim Fit T-Shirts</p>
+                  <p class="details__price">Rs. 2200</p>
+                <div class="cartItem__actions">
+                  
+                  <div class="cartItem__qty">
+                    <label htmlFor="qty">Qty</label>
+                      <input
+                        min="1"
+                        type="number"
+                        id="qty"
+                        name="qty"
+                        value=2
+                      />
+                  </div>
+                  
+                </div>
+          
+              </div>
+          
+                <div class="btn__holder">
+                
+                  <button
+                    class="actions__deleteItemBtn"
+                  >
+                    <img
+                      src="/close.png"
+                      alt=""
+                    />
+                  </button>
+                
+                </div>
+          
+            </div>
+        </div>
+        <div class="cart__summary">
+          <h4 class="summary__title">Cart Summary</h4>
+          <div class="table__holder">
+            <table >
+              <tbody>
+                <tr>
+                  <th>Dish Item</th>
+                  <th>Dish Price</th>
+                  <th>Quantity</th>
+                </tr>
+                  <tr>
+                    <th>Mens Cotton Jacket</th>
+                    <th>2200</th>
+                    <th>2</th>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr/>
+          <div class="summary__price">
+            <span>TOTAL: 2</span>
+            <span>Rs 4400</span>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+</body>
+</html>

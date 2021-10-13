@@ -1,0 +1,355 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+  --black__dark: #0b0c10;
+  --black_light: #1f2833;
+  --gray_white: #c5c6c7;
+  --blue_cyan: #66fcf1;
+  --blue_dark: #45a29e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0c10;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2345a29e' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%231f2833' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2361a9af' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%232f4c5f' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%237db0ba' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2337748b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2398b6c2' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%233da0b3' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b1bec6' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2349cdd6' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23c5c6c7' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2366fcf1' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background: rgb(0, 0, 0, 75%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+}
+
+.navbar__logo {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: var(--blue_cyan);
+  outline: none;
+  z-index: inherit;
+}
+
+.navbar__cart {
+  background: transparent;
+  width: fit-content;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: inherit;
+  outline: none;
+}
+
+.cart__title {
+  color: var(--blue_cyan);
+  margin: 10px;
+  outline: none;
+}
+.cart__counter {
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--black__dark);
+  border-radius: 50%;
+  color: var(--black__dark);
+  background: var(--blue_cyan);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.cart__counter:hover {
+  background-color: var(--black__dark);
+  color: var(--blue_cyan);
+}
+
+
+    .app {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+    .products {
+  margin-top: 100px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  background-color: #0b0c10;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2345a29e' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%231f2833' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2361a9af' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%232f4c5f' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%237db0ba' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2337748b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2398b6c2' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%233da0b3' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b1bec6' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2349cdd6' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23c5c6c7' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2366fcf1' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product {
+  width: 30%;
+  margin: 1.5%;
+  max-height: 500px;
+  box-shadow: 0 2px 8px rgba(22, 160, 214, 0.26);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  float: left;
+}
+
+.product__image {
+  object-fit: contain;
+  flex: 30%;
+  width: 100%;
+  border-radius: 2px;
+  transition: transform 0.2s; /* Animation */
+  overflow: hidden;
+}
+.product__image:hover {
+  transform: scale(1.5);
+}
+
+.product__details {
+  flex: 30%;
+  background-color: var(--blue_dark);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 99;
+}
+
+.details__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--black__dark);
+}
+
+.details__desc {
+  font-size: 10px;
+  color: var(--black_light);
+}
+
+.details__price {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black__dark);
+}
+
+.product__buttons {
+  flex: 30%;
+  background-color: var(--blue_dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem;
+  z-index: 99;
+}
+
+.buttons__btn {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid var(--blue_cyan);
+  border-radius: 10px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--black__dark);
+  color: var(--blue_cyan);
+  z-index: 99;
+}
+
+.buttons__btn:hover {
+  background: var(--blue_cyan);
+  color: var(--black__dark);
+}
+
+.buttons__view {
+  background: var(--black_light);
+  color: var(--blue_cyan);
+}
+
+.buttons__add {
+  background: var(--secondary-color);
+  color: var(--light-color);
+}
+
+@media only screen and (max-width: 800px) {
+  .product {
+    width: 45%;
+    margin: 2.5%;
+    max-height: 300px;
+  }
+}
+
+</style>
+<body>
+    <div class="app">
+    <div id="root">
+        <div class="navbar">
+              <h2 class="navbar__logo">Menu</h2>
+            <Link to="/cart">
+              <div class="navbar__cart">
+                <h3 class="cart__title">Cart</h3>
+                <div class="cart__counter">1</div>
+              </div>
+            </Link>
+          </div>
+    <div class="products">
+          <div class="product">
+            <img
+              class="product__image"
+              src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+              alt="title"
+            />
+      
+            <div class="product__details">
+              <p class="details__title">Mens Casual Premium Slim Fit T-Shirts</p>
+              <p class="details__desc">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.</p>
+              <p class="details__price">Rs. 22.3</p>
+            </div>
+      
+            <div class="product__buttons">
+                <button
+                  class="buttons__btn"
+                >
+                  View Item
+                </button>
+              <button
+                class="buttons__btn"
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              class="product__image"
+              src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+              alt="title"
+            />
+      
+            <div class="product__details">
+              <p class="details__title">Mens Casual Premium Slim Fit T-Shirts</p>
+              <p class="details__desc">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.</p>
+              <p class="details__price">Rs. 22.3</p>
+            </div>
+      
+            <div class="product__buttons">
+                <button
+                  class="buttons__btn"
+                >
+                  View Item
+                </button>
+              <button
+                class="buttons__btn"
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              class="product__image"
+              src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+              alt="title"
+            />
+      
+            <div class="product__details">
+              <p class="details__title">Mens Casual Premium Slim Fit T-Shirts</p>
+              <p class="details__desc">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.</p>
+              <p class="details__price">Rs. 22.3</p>
+            </div>
+      
+            <div class="product__buttons">
+                <button
+                  class="buttons__btn"
+                >
+                  View Item
+                </button>
+              <button
+                class="buttons__btn"
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              class="product__image"
+              src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+              alt="title"
+            />
+      
+            <div class="product__details">
+              <p class="details__title">Mens Casual Premium Slim Fit T-Shirts</p>
+              <p class="details__desc">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.</p>
+              <p class="details__price">Rs. 22.3</p>
+            </div>
+      
+            <div class="product__buttons">
+                <button
+                  class="buttons__btn"
+                >
+                  View Item
+                </button>
+              <button
+                class="buttons__btn"
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              class="product__image"
+              src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+              alt="Loading"
+            />
+      
+            <div class="product__details">
+              <p class="details__title">Mens Casual Premium Slim Fit T-Shirts</p>
+              <p class="details__desc">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.</p>
+              <p class="details__price">Rs. 2200</p>
+            </div>
+      
+            <div class="product__buttons">
+                <button
+                  class="buttons__btn"
+                >
+                  View Item
+                </button>
+              <button
+                class="buttons__btn"
+              >
+                Add To Cart
+              </button>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
