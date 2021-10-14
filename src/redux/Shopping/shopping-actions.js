@@ -34,3 +34,16 @@ export const loadCurrentItem = (item) => {
     payload: item,
   };
 };
+
+export const login = (name)=>{
+  return{
+    type: "LOGIN",
+    payload: name
+  }
+}
+
+export const logout = (name)=>{
+  return {
+    type:"LOGOUT"
+  }
+}

@@ -54,3 +54,14 @@
   background-color: var(--black__dark);
   color: var(--blue_cyan);
 }
+.login__btn {
+  width: 200px;
+  height: 40px;
+  background-color: var(--blue_cyan);
+  color: var(--black__dark);
+  border-radius: 10px;
+}
+.login__btn:hover {
+  background-color: var(--black__dark);
+  color: var(--blue_cyan);
+}

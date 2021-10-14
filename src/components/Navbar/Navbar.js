@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 
 import { connect } from "react-redux";
 
-const Navbar = ({ cart }) => {
+const Navbar = ({ cart,isLogin }) => {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ const Navbar = ({ cart }) => {
       </Link>
       <Link to="/cart">
         <div className={styles.navbar__cart}>
-          <h3 className={styles.cart__title}>Cart</h3>
-          <div className={styles.cart__counter}>{cartCount}</div>
+          {isLogin ? (<><h3 className={styles.cart__title}>Cart</h3>
+          <div className={styles.cart__counter}>{cartCount}</div></>):<button className={styles.login__btn}>Login</button>}
         </div>
       </Link>
     </div>
@@ -34,6 +34,7 @@ const Navbar = ({ cart }) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.shop.cart,
+    isLogin: state.shop.isLogin
   };
 };
 

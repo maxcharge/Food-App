@@ -12,7 +12,6 @@
 }
 
 .product__image {
-  object-fit: contain;
   flex: 30%;
   width: 100%;
   border-radius: 2px;
