@@ -42,7 +42,7 @@ export const login = (name)=>{
   }
 }
 
-export const logout = (name)=>{
+export const logout = ()=>{
   return {
     type:"LOGOUT"
   }

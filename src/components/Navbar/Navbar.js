@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 import { connect } from "react-redux";
+import { logout } from "../../redux/Shopping/shopping-actions";
 
-const Navbar = ({ cart,isLogin }) => {
+const Navbar = ({ cart,isLogin,logout }) => {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
@@ -18,15 +19,20 @@ const Navbar = ({ cart,isLogin }) => {
 
   return (
     <div className={styles.navbar}>
-      <Link to="/">
+      <Link to="/products">
         <h2 className={styles.navbar__logo}>Menu</h2>
       </Link>
-      <Link to="/cart">
-        <div className={styles.navbar__cart}>
-          {isLogin ? (<><h3 className={styles.cart__title}>Cart</h3>
-          <div className={styles.cart__counter}>{cartCount}</div></>):<button className={styles.login__btn}>Login</button>}
-        </div>
-      </Link>
+      {isLogin && (
+        <Link to="/cart">
+          <div className={styles.navbar__cart}>
+            <h3 className={styles.cart__title}>Cart</h3>
+            <div className={styles.cart__counter}>{cartCount}</div>
+          </div>
+        </Link>
+      )}
+      {isLogin && (
+          <button onClick={logout} className={styles.login__btn}>Logout</button>
+      )}
     </div>
   );
 };
@@ -34,8 +40,14 @@ const Navbar = ({ cart,isLogin }) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.shop.cart,
-    isLogin: state.shop.isLogin
+    isLogin: state.shop.user.isLogin,
   };
 };
 
-export default connect(mapStateToProps)(Navbar);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () => dispatch(logout()),
+  };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(Navbar);

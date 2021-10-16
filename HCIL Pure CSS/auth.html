@@ -1,0 +1,300 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+  --black__dark: #0b0c10;
+  --black_light: #1f2833;
+  --gray_white: #c5c6c7;
+  --blue_cyan: #66fcf1;
+  --blue_dark: #45a29e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0c10;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2345a29e' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%231f2833' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2361a9af' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%232f4c5f' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%237db0ba' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2337748b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2398b6c2' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%233da0b3' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b1bec6' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2349cdd6' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23c5c6c7' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2366fcf1' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background: rgb(0, 0, 0, 75%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+}
+
+.navbar__logo {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: var(--blue_cyan);
+  outline: none;
+  z-index: inherit;
+}
+
+.navbar__cart {
+  background: transparent;
+  width: fit-content;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: inherit;
+  outline: none;
+}
+.cart__title {
+  color: var(--blue_cyan);
+  margin: 10px;
+  outline: none;
+}
+.cart__counter {
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--black__dark);
+  border-radius: 50%;
+  color: var(--black__dark);
+  background: var(--blue_cyan);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.cart__counter:hover {
+  background-color: var(--black__dark);
+  color: var(--blue_cyan);
+}
+
+
+    .app {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:500px;
+	position:relative;	
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	margin-top: 100px;
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:var(--black_light);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+	color: var(--black__dark);
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:var(--blue_dark);
+	border-color:var(--blue_cyan);
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:var(--black__dark);
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:var(--blue_dark);
+	font-size:12px;
+}
+.login-form .group .button{
+	background:var(--blue_cyan);
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:var(--blue_dark);
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:var(--blue_dark);
+}
+.login-form .group .check:checked + label .icon{
+	background:var(--blue_cyan);
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+</style>
+<body>
+    <div class="app">
+        <div id="root">
+            <div class="navbar">
+                  <h2 class="navbar__logo">Menu</h2>
+                  <div class="navbar__cart">
+                    <h3 class="cart__title">Cart</h3>
+                    <div class="cart__counter">1</div>
+                  </div>
+              </div>
+              <div class="login-wrap">
+                <div class="login-html">
+                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked/><label for="tab-1" class="tab">Sign In</label>
+                    <input id="tab-2" type="radio" name="tab" class="sign-up"/><label for="tab-2" class="tab">Sign Up</label>
+                    <div class="login-form">
+                        <div class="sign-in-htm">
+                            <div class="group">
+                                <label for="user" class="label">Username</label>
+                                <input id="user" type="text" class="input"/>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Password</label>
+                                <input id="pass" type="password" class="input" data-type="password"/>
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" checked/>
+                                <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Sign In"/>
+                            </div>
+                        </div>
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                <label for="user" class="label">Username</label>
+                                <input id="user" type="text" class="input"/>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Password</label>
+                                <input id="pass" type="password" class="input" data-type="password"/>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Repeat Password</label>
+                                <input id="pass" type="password" class="input" data-type="password"/>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Email Address</label>
+                                <input id="pass" type="text" class="input"/>
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Sign Up"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      </div>
+</body>
+</html>

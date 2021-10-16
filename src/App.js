@@ -11,10 +11,10 @@ import { connect } from "react-redux";
 
 import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
-import Cart from "./components/Cart/Cart";
 import SingleItem from "./components/SingleItem/SingleItem";
 import Welcome from "./components/Welcome/Welcome";
 import Login from "./components/Form/Login";
+import Cart from './components/Cart/Cart'
 
 
 function App({ current,isLogin }) {
@@ -23,17 +23,12 @@ function App({ current,isLogin }) {
       <div className="app">
         <Navbar />
         <Switch>
-        <Route exact path="/" component={Welcome} />
-          {isLogin ? (
-            <>
-              <Route exact path="/home" component={Products} />
-              <Route exact path="/cart" component={Cart} />
-            </>
-          ) : (
-            <Route exact path="/home" component={Login} />
-          )}
-          {!current && isLogin ? (
-            <Redirect to="/home" />
+          {!isLogin && <Route path="/*" component={Login} />}
+          <Route exact path="/Food-App" component={Welcome} />
+          <Route exact path="/products" component={Products} />
+          <Route exact path="/cart" component={Cart} />
+          {!current  ? (
+            <Redirect to="/products" />
           ) : (
             <Route exact path="/product/:id" component={SingleItem} />
           )}
@@ -46,7 +41,7 @@ function App({ current,isLogin }) {
 const mapStateToProps = (state) => {
   return {
     current: state.shop.currentItem,
-    isLogin: state.shop.isLogin
+    isLogin: state.shop.user.isLogin
   };
 };
 
