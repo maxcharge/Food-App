@@ -49,7 +49,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
       <div className={styles.btn__holder}>
       
         <button
-          onClick={() => removeFromCart(item.id)}
+          // onClick={() => removeFromCart(item.id)}
           className={styles.actions__deleteItemBtn}
         >
           <img

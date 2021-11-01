@@ -23,7 +23,7 @@ function App({ current,isLogin }) {
       <div className="app">
         <Navbar />
         <Switch>
-          {!isLogin && <Route path="/*" component={Login} />}
+          { <Route path="/*" component={Login} />}
           <Route exact path="/Food-App" component={Welcome} />
           <Route exact path="/products" component={Products} />
           <Route exact path="/cart" component={Cart} />

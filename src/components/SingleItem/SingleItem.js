@@ -18,7 +18,7 @@ const SingleItem = ({ current, addToCart }) => {
         <p className={styles.details__price}>Rs. {current.price}</p>
 
         <button
-          onClick={() => addToCart(current.id)}
+          // onClick={() => addToCart(current.id)}
           className={styles.details__addBtn}
         >
           Add To Cart
