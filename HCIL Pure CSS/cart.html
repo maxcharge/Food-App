@@ -7,11 +7,11 @@
 </head>
 <style>
     :root {
-  --black__dark: #0b0c10;
-  --black_light: #1f2833;
-  --gray_white: #c5c6c7;
-  --blue_cyan: #66fcf1;
-  --blue_dark: #45a29e;
+      --black__dark: #1F1D36;
+    --black_light: #3F3351;
+    --gray_white: #c5c6c7;
+    --blue_cyan: #E9A6A6;
+    --blue_dark: #864879;
 }
 
 * {
@@ -22,13 +22,14 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #0b0c10;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #864879;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%233f3351' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23e9a6a6' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23524f6a' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23d8919b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23696c81' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23c67d91' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23848a99' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b26a88' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23a3a8b0' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239d5880' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23c5c6c7' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23864879' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
 }
 
 .navbar {
-  background: rgb(0, 0, 0, 75%);
+  background: #1f1d3652;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -105,7 +106,7 @@ a {
 }
 
 .cart__summary {
-  color: var(--blue_dark);
+  color: var(--black__dark);
   margin: 50px;
   height: 250px;
   flex: 30%;
@@ -113,30 +114,30 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
-  box-shadow: 0 2px 8px rgba(16, 202, 235, 0.26);
+  box-shadow: 0 2px 8px #1f1d3652;
   border-radius: 10px;
 }
 
 .summary__title {
-    color: var(--blue_dark);
+    color: var(--black__dark);
   font-size: 30px;
   font-weight: bold;
 }
 
 .summary__price {
-    color: var(--blue_dark);
+    color: var(--black__dark);
   display: flex;
   align-items: center;
 }
 
 .summary__price span:nth-child(1) {
-    color: var(--blue_dark);
+    color: var(--black__dark);
   font-size: 20px;
   flex: 0.6;
 }
 
 .summary__price span:nth-child(2) {
-    color: var(--blue_dark);
+    color: var(--black__dark);
   flex: 0.4;
   font-size: 30px;
   font-weight: bold;
@@ -156,8 +157,8 @@ a {
 
 .summary__checkoutBtn:hover {
   outline: none;
-  background: var(--blue_cyan);
-  color: var(--black__dark);
+  background: var(--black__dark);
+  color: var(--black_light);
 }
 
 .summary__checkoutBtn:hover {
@@ -168,12 +169,12 @@ table {
   width: 100%;
 }
 th {
-  border: 1px solid var(--blue_dark);
-  color: var(--blue_dark);
+  border: 1px solid var(--black__dark);
+  color: var(--black__dark);
 }
 
 hr {
-  border-color: aqua;
+  border-color: var(--black__dark);
 }
 
 @media only screen and (max-width: 800px) {
@@ -185,7 +186,7 @@ hr {
   margin: 50px;
   display: flex;
   flex-direction: row;
-  box-shadow: 0 2px 8px rgba(14, 203, 209, 0.26);
+  box-shadow: 0 2px 8px  #1f1d3652;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -202,7 +203,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: var(--blue_dark);
+  color: var(--black__dark);
 }
 
 .details__title {
@@ -239,7 +240,7 @@ hr {
   border-radius: 10px;
   color: var(--blue_cyan);
   background: transparent;
-  border: 1px solid #66fcf1;
+  border: 1px solid var(--black__dark);
   outline: none;
 }
 
@@ -253,6 +254,7 @@ hr {
   height: 50px;
   background-color: transparent;
   border-radius: 50%;
+  border-width: 0px;
   cursor: pointer;
   transition: all ease-in-out 0.7s;
   outline: none;
@@ -290,6 +292,7 @@ hr {
         <div class="cart__items">
             <div class="cartItem">
                 <img
+                  height="370px"
                   class="cartItem__image"
                   src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
                   alt="Title"
@@ -321,7 +324,7 @@ hr {
                     class="actions__deleteItemBtn"
                   >
                     <img
-                      src="/close.png"
+                      src="https://icon-library.com/images/close-icon/close-icon-17.jpg"
                       alt=""
                     />
                   </button>
